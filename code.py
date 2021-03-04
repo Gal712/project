@@ -285,7 +285,3 @@ ichsun_loc = column_index(final_merged_df, ["additionalAttributes.ichidatIchsun"
 new_df = final_merged_df
 new_df.iloc[:,ichsun_loc[0]] = reshape_text(final_merged_df.iloc[:,ichsun_loc[0]])
 new_df.groupby(new_df.iloc[:,ichsun_loc[0]]).size().plot.bar(figsize=(8,5), fontsize=15)
-
-stam = files.upload()
-stam = pd.read_csv("final.csv")
-print(stam.shape)
